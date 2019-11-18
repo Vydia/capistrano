@@ -88,7 +88,7 @@ module Capistrano
     end
 
     def timestamp
-      @timestamp ||= Time.now.utc
+      @timestamp ||= fetch(:timestamp) || Time.now.utc
     end
 
     def setup_filters
